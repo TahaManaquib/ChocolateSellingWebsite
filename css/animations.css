@@ -1,0 +1,19 @@
+/* css various animations */
+@keyframes roll-center {
+    0%{box-shadow: 0 0 0 1vh tan; opacity: 0; transform: rotate(720deg);}
+    100%{box-shadow: 0 0 0 1vh tan; opacity: 1; transform: rotate(0);}
+}
+@keyframes fade-down {
+    0%{opacity: 0; transform: rotate(45deg) translateX(-50vh) translateY(-50vh);}
+    100%{opacity: 1; transform: rotate(45deg) translateX(0) translateY(0);}
+}
+@keyframes fade-up {
+    0%{opacity: 0; transform: rotate(45deg) translateX(50vh) translateY(50vh);}
+    100%{opacity: 1; transform: rotate(45deg) translateX(0) translateY(0);}
+}
+@keyframes pulse {
+    0%{ box-shadow:  0 0 0 1vh tan, 0 0 1vh 0 rgba(210, 180, 140, .7);}
+    40%{ box-shadow:  0 0 0 1vh tan, 0 0 1vh 4vw rgba(210, 180, 140, 0);}
+    80%{ box-shadow:  0 0 0 1vh tan, 0 0 1vh 4vw rgba(210, 180, 140, 0);}
+    100%{ box-shadow:  0 0 0 1vh tan, 0 0 1vh 0 rgba(210, 180, 140, 0);}
+}

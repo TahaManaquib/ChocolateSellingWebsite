@@ -1,0 +1,368 @@
+
+
+/* for smartphones */
+@media screen and (max-width: 500px) {
+    /* responsieness for home page */
+    .top-left, .top-right, .bottom-left, .bottom-right, .bottom-right-nohover{
+        display: none;
+    }
+
+    .responsive-menu{
+        visibility: visible;
+        position: absolute;
+        transition: 1s;
+        left: 0;
+        top: 0;
+        background-color: tan;
+        width: 0%;
+        height: 100%;
+    }
+
+    .responsive-menu nav{
+        position: absolute;
+        top: 30%;
+        margin-left: 3rem;
+    }
+
+    .responsive-menu nav ul{
+        font-family: 'Abel', sans-serif;
+    }
+
+    .responsive-menu nav ul li{
+        font-size: 3rem;
+        border-bottom: 2px solid rgb(143, 123, 96);
+        text-transform: uppercase;
+    }
+
+    .responsive-menu nav ul li a{
+        text-decoration: none;
+        color: white;
+    }
+    .responsive-menu nav ul li a:hover{
+        color: rgb(143, 123, 96);
+    }
+
+    .fa-arrow-circle-right{
+        visibility: visible;
+        transition: 1s;
+        z-index: 1;
+        margin: 1rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: tan;
+        background-color: black;
+        border-radius: 50%;
+        font-size: 3rem;
+    }
+    .fa-arrow-circle-right:hover{
+        cursor: pointer;
+        color: rgb(143, 123, 96);
+    }
+
+    .responsive-menu nav{
+        top: 30%;
+    }
+
+    .responsive-menu nav ul li{
+        font-size: 3rem;
+    }
+
+    .dev-info{
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        margin: 2vh;
+        top: 0;
+        right: 0;
+    }
+
+    .details h3{
+        font-size: small;
+    }
+    
+    .details p{
+        font-size: small;
+        font-weight: bold;
+        margin: 0 2vh;
+    }
+    
+    .details h5{
+        font-size: small;
+        text-decoration: underline;
+        text-align: center;
+        margin: .5vh 0 2.5vh 0;
+    }
+
+    /* responsiveness for the contact page */
+    .contact-me{
+        display: none;
+        transition: .8s;
+    }
+    
+    .email-content{
+        width: 90vw;
+        height: 94vh;
+    }
+
+    .email-content button{
+        font-size: 1rem;
+    }
+
+    .email-content a{
+        font-size: 1.5rem;
+    }
+
+    /* responsiveness for about page */
+    .about-page{
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .about-page img{
+        width: 70%;
+        margin: 5rem 0 2rem 2rem;
+        align-self: flex-start;
+    }
+
+    .info{
+        margin: 0;
+        width: 100%;
+        font-size: 1rem;
+        margin-left: 3rem;
+    }
+
+    .info h2{
+        position: absolute;
+        top: 2.5rem;
+    }
+
+    .info h4, .info p{
+        font-size: 1.5rem;
+        width: 85%;
+    }
+
+    /* responsiveness for order page */
+    .order-page h2{
+        margin: 3rem 0 1rem 0;
+    }
+
+    .container{
+        margin: 1rem 2rem;
+        width: 80vw;
+        height: auto;
+        padding-top: 1rem;
+    }
+
+    .category{
+        grid-template-columns: auto;
+    }
+
+    input[value="View Order"]{
+        width: auto;
+        position: unset;
+        margin: 1rem;
+    }
+
+    input[value="Comments/Suggestions"]{
+        width: auto;
+        position: unset;
+        margin: 1rem;
+    }
+
+    .item{
+        height: 45vh;
+        width: 60vw;
+        margin: 1rem;
+    }
+
+    .image{
+        width: 30vh;
+        height: 30vh;
+    }
+
+    .image img{
+        max-width: 30vv;
+        max-height: 30vv;
+    }
+
+    .name-overlay h4{
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .name-overlay p{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .content{
+        justify-content: space-around;
+    }
+
+    .content p{
+        font-size: 1rem;
+    }
+
+    .result{
+        font-size: large;
+        width: 7vh;
+        height: 3.5vh;    
+    }
+
+    .comments{
+        margin: 2rem 2rem;
+        width: 80vw;
+    }
+
+    .comments-store{
+        margin: 0 2rem 2rem 2rem;
+        font-size: .75rem;
+        width: 60vw;
+        height: auto;
+    }
+
+    /* responsiveness for order compilation pop-up */
+    .checkout{
+        left: 0;
+        width: 90vw;
+        margin: 0 1rem;
+    }
+
+    .header{
+        width: 90vw;
+        height: 10vh;
+    }
+
+    #order-exit{
+        right: 2vh;
+    }
+
+    .check{
+        width: 90vw;
+        height: auto;
+    }
+
+    .mail{
+        width: 90vw;
+        height: auto;
+    }
+
+    .mail input{
+        margin: 2vh .5vh;
+        max-width: 15vh;
+        height: 4vh;
+    }
+
+    .order-check{
+        width: 90vw;
+    }
+
+    .checkout-items{
+        font-size: .7rem;
+        align-items: center;
+    }
+
+    .remove-item{
+        width: 8vh;
+        height: 3vh;
+        font-size: .7rem;
+        margin: 0 1vh;
+    }
+
+    .item-name{
+        width: 10vh;
+        margin-right: 1vh;
+    }
+    
+    .item-price{
+        width: 3vh;
+        margin-right: 1vh;
+    }
+    
+    .quantity{
+        width: 9vh;
+        margin-right: 1vh;
+        font-size: .7rem;
+    }
+    
+    .quantity input{
+        overflow: hidden;
+        border: none;
+        outline: none;
+        width: 3vh;
+        height: 3vh;
+        background-color: tan;
+    }
+
+    #total{
+        margin: 3vh 12vh 0 0;
+    }
+
+    #grand-total{
+        margin: 3vh -14vh 0 0vh;
+    }
+
+    .purchase-btn{
+        margin-top: 3vh;
+        font-size: 1rem;
+        width: 14vh;
+    }
+
+    /* responsiveness for comments/suggestions pop up */
+    .comments-suggestions{
+        left: 0;
+        width: 90vw;
+        margin: 0 1rem;
+    }
+
+    #comments-exit{
+        right: 2vh;
+    }
+
+    .popup-comments{
+        width: 90vw;
+    }
+
+    .popup-comments input{
+        height: 4vh;
+        margin: 1vh 5%;
+    }
+
+    textarea{
+        margin: 1vh 5%;
+    }
+
+    .popup-comments button{
+        margin-top: 2vh;
+        font-size: 1rem;
+        width: 14vh;
+    }
+
+    /* responsiveness for social page */
+    .social-page{
+        height: 70vh;
+    }
+    
+    .collab h2{
+        margin: 2.4rem 0 1rem 0 ;
+    }
+
+    .collab h4{
+        font-size: 1.2rem;
+    }
+
+    .collab .para{
+        margin-top: 3rem;
+    }
+
+    .social-item img{
+        margin: 3rem;
+        width: 5rem;
+    }
+}
+
+/* 
+@media screen and (height: ){
+    
+} */

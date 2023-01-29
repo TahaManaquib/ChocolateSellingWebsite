@@ -1,0 +1,944 @@
+/* css for the whole website */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* css for scrollbar of the website */
+::-webkit-scrollbar{
+    width: 1vh;
+    border-radius: .5vh;
+    box-shadow: inset 0 0 .5vh  rgba(210, 180, 140, .7);
+}
+::-webkit-scrollbar-track{
+    background-color: wheat;
+}
+::-webkit-scrollbar-thumb{
+    background-color: tan;
+    border-radius: .5vh;
+}
+
+/* css for developer info */
+/* .dev-info{
+    overflow: hidden;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 5vh;
+    height: 5vh;
+    border: 3px solid grey;
+    border-radius: 50%;
+    z-index: 10;
+    top: 3vh;
+    right: 3vh;
+    font-family: 'Abel', sans-serif;
+    transition: .5s;
+}
+.dev-info:hover{
+    width: 30vh;
+    height: 20vh;
+    border-radius: 10px;
+    border: 3px solid grey;
+    background-color: cornsilk;
+}
+.dev-info:hover .square{
+    opacity: 0;
+}
+.dev-info:hover .rectangle{
+    opacity: 0;
+}
+.dev-info:hover .details{
+    display: block;
+}
+
+.dev-info .square{
+    width: .5vh;
+    height: .5vh;
+    background-color: grey;
+    margin-bottom: .5vh;
+}
+.dev-info .rectangle{
+    width: .5vh;
+    height: 1.5vh;
+    background-color: grey;
+} */
+
+/* .details{
+    position: absolute;
+    width: 30vh;
+    height: 20vh;
+    border-radius: 10px;
+    border: 3px solid grey;
+    background-color: cornsilk;
+    display: none;
+    transition: 1s;
+    font-family: monospace;
+}
+
+.details h3{
+    margin: 1vh 2vh;
+}
+
+.details p{
+    font-weight: bold;
+    margin: 0 2vh;
+}
+
+.details h5{
+    text-decoration: underline;
+    text-align: center;
+    margin: .5vh 0 2.5vh 0;
+} */
+
+/* .social{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social img{
+    margin: 1vh;
+    width: 5vh;
+    transition: .5s;
+}
+.social img:hover{
+    transform: rotate(360deg);
+} */
+
+/* css for only the home page */
+.home-page{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.home-page img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.image-overlay{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;   
+    background-color: rgba(0,0,0,.6);
+}
+
+.image-overlay img{
+    border-radius: 50%;
+    width: 45vh;
+    height: 45vh;
+    animation: roll-center 3s, pulse 2.5s 2.9s linear infinite;
+}
+
+/* css for placement of top left menu */
+.top-left{
+    position: absolute;
+    top: -65vh;
+    left: -65vh;
+    transform: rotate(45deg);
+    background-color: tan;
+    width: 100vh;
+    height: 100vh;
+    animation: fade-down 2s;
+    transition: .5s;
+}
+.top-left:hover{
+    box-shadow: 0 0 4vw 2vw black;
+    top: -55vh;
+    left: -55vh;
+}
+
+/* css for menu */
+.menu:hover nav{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: rotate(-45deg);
+    right: 15%;
+    bottom: 30%;
+}
+
+.menu nav ul{
+    list-style-type: none;
+    text-transform: uppercase;
+    font-family: 'Abel', sans-serif;
+}
+
+.menu nav ul li{
+    font-size: 2.5rem;
+}
+
+.menu nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+.menu nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.responsive-menu{
+    visibility: hidden;
+}
+
+.fa-arrow-circle-right{
+    visibility: hidden;
+}
+
+/* css for placement of bottom right contact */
+.bottom-right{
+    position: absolute;
+    bottom: -65vh;
+    right: -65vh;
+    transform: rotate(45deg);
+    background-color: tan;
+    width: 100vh;
+    height: 100vh;
+    animation: fade-up 2s;
+    transition: .5s;
+}
+.bottom-right:hover{
+    box-shadow: 0 0 4vw 2vw black;
+    bottom: -55vh;
+    right: -55vh;
+}
+
+/* css for contact menu*/
+.contact:hover nav{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: rotate(-45deg);
+    left: 15%;
+    top: 50%;
+}
+
+.contact nav ul{
+    list-style-type: none;
+    text-transform: uppercase;
+    font-family: 'Abel', sans-serif;
+}
+
+.contact nav ul li{
+    font-size: 2.5rem;
+}
+
+.contact nav ul li a{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.contact nav ul li a:hover{
+    font-family: 'Abel', sans-serif;
+    text-decoration: underline;
+}
+
+/* css for the contact page of the website */
+.contact-me{
+    display: none;
+    z-index: 1;
+    font-family: 'Abel', sans-serif;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    transform: rotate(-45deg) translateX(40vh) translateY(160vh);
+}
+
+.email{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: tan;
+}
+
+.email-content{
+    position: absolute;
+    width: 95vw;
+    height: 90vh;
+    background-color: antiquewhite;
+    opacity: .7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-content button{
+    border: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    background-color: antiquewhite;
+    padding: 1rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+.email-content button:hover{
+    background-color: tan;
+    text-decoration: underline;
+}
+
+.email-content a{
+    text-decoration: none;
+    color: black;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.email-content a:hover{
+    text-decoration: underline;
+}
+
+/* css for the about page of the website */
+.about-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    overflow-y: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #371b05, #4e2c12, #673f1c, #805225, #99672f);
+}
+
+.about-page img{
+    margin-left: 12rem;
+    width: 150%;
+    border-radius: 10px;
+    box-shadow: 0 0 1vh rgb(255, 255, 255);
+}
+
+.info{
+    font-family: 'Abel', sans-serif;
+    margin: 0 12rem 0 5rem;
+    color: white;
+    font-size: 1.6rem;
+}
+
+ h2{
+    font-family: 'Abel', sans-serif;
+    color: white;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.top-right{
+    position: absolute;
+    top: -65vh;
+    right: -65vh;
+    transform: rotate(45deg);
+    background-color: tan;
+    width: 100vh;
+    height: 100vh;
+    transition: .5s;
+    
+}
+.top-right:hover{
+    box-shadow: 0 0 4vw 2vw black;
+    top: -55vh;
+    right: -55vh;
+}
+
+.menu2:hover nav{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: rotate(-45deg);
+    bottom: 6%;
+    left: 47%;
+}
+
+.menu2 nav ul{
+    list-style-type: none;
+    text-transform: uppercase;
+    font-family: 'Abel', sans-serif;
+}
+
+.menu2 nav ul li{
+    font-size: 2.5rem;
+}
+
+.menu2 nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+.menu2 nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.bottom-left{
+    position: absolute;
+    bottom: -65vh;
+    left: -65vh;
+    transform: rotate(45deg);
+    background-color: tan;
+    width: 100vh;
+    height: 100vh;
+}
+
+/* css for the order page of the website */
+.order-page{
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    height: auto;
+    overflow-y: hidden;
+    background-color: wheat;
+    font-family: 'Abel', sans-serif;
+}
+
+.order-page h2{
+    text-align: center;
+    margin: 4.5rem 0 1.5rem 0;
+    color: black;
+}
+
+.order-page .para{
+    font-size: 1.5rem;
+    text-align: center;
+    color: black;
+    margin-bottom: 3rem;
+}
+
+.container{
+    display: grid;
+    position: relative;
+    grid-template-columns: auto ;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    background-color: cornsilk;
+    box-shadow: 0 0 1vh grey;
+    height: auto;
+    width: auto;
+    padding-top: 3rem;
+    margin: 4rem 6rem;
+    margin-bottom: 8rem;
+}
+
+.category{
+    display: grid;
+    position: relative;
+    grid-template-columns: auto auto auto;
+}
+
+.category h3{
+    justify-self: center;
+    position: absolute;
+    font-size: x-large;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+input[value="View Order"]{
+    border-radius: 5px;
+    border: none;
+    font-size: large;
+    background-color: tan;
+    color: black;
+    position: absolute;
+    top: 5vh;
+    right: 10vh;
+    width: 20vh;
+    height: 6vh;
+    z-index: 1;
+}
+input[value="View Order"]:hover{
+    background-color: rgb(172, 143, 105);
+}
+
+input[value="Comments/Suggestions"]{
+    border-radius: 5px;
+    border: none;
+    font-size: large;
+    background-color: tan;
+    color: black;
+    position: absolute;
+    top: 5vh;
+    left: 10vh;
+    width: 35vh;
+    height: 6vh;
+    z-index: 1;
+}
+input[value="Comments/Suggestions"]:hover{
+    background-color: rgb(172, 143, 105);
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    border-radius: 10px;
+    width: 20vw;
+    height: 55vh;
+}
+
+.image{
+    overflow-y: hidden;
+    position: relative;
+    width: 40vh;
+    height: 40vh;
+    background-color: wheat;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image:hover .name-overlay{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image img{
+    image-rendering: auto;
+    position: relative;
+    max-width: 40vh;
+    max-height: 40vh;
+    border-radius: 10px;
+}
+
+.name-overlay{
+    opacity: 0;
+    transform: translateY(40vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    transition: .5s;
+}
+
+.name-overlay h4{
+    text-decoration: underline; 
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    /* margin-top: -7rem; */
+    font-size: x-large;
+    text-align: center;
+}
+
+.name-overlay p{
+    text-align: center;
+    font-family: 'Castoro', serif;
+    margin: 0 1rem;
+    font-size: large;
+    /* margin-top: 1.5rem; */
+}
+
+.content{
+    display: flex;
+    margin: 1rem 1rem;
+}
+
+.content p{
+    font-weight: bold;
+    font-size: large;
+    margin: .15rem 0 .15rem 3rem;
+}
+
+.result{
+    border: none;
+    background-color: tan;
+    width: 10vh;
+    height: 4vh;
+    border-radius: 5px;;
+}
+.result:hover{
+    background-color: rgb(172, 143, 105);
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    overflow-y: hidden;
+    /* position: relative; */
+    width: auto;
+    height: auto;
+    /* font-family: 'Abel', sans-serif; */
+    border-radius: 10px;
+    background-color: cornsilk;
+    box-shadow: 0 0 1vh grey;
+    margin: 0 6rem 8rem 6rem;
+    /* background-image: linear-gradient(to bottom, #371b05, #4e2c12, #673f1c, #805225, #99672f); */
+}
+
+.comments h3{
+    justify-self: center;
+    font-size: x-large;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin: 2rem 0;
+}
+
+.comments-store{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: tan;
+    border-radius: 10px;
+    width: 90%;
+    height: 10vh;
+    padding: 2vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* css for the order compilation pop-up page */
+.checkout{
+    opacity: 0;
+    transform: translateX(-200vh);
+    position: absolute;
+    top: 35vh;
+    left: 20vw;
+    width: 60vw;
+    max-height: 80vh;
+    border-radius: 10px;
+    border: 2px solid black;
+    z-index: 4;
+}
+
+.header{
+    background-color: tan;
+    height: 6vh;
+    width: 60vw;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+#order-exit{
+    overflow-y: hidden;
+    border-radius: 50%;
+    border: none;
+    background-color: tan;
+    font-size: 25px;
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    right: 5vh;
+}
+#order-exit:hover{
+    background-color: wheat;
+}
+
+.check{
+    width: 60vw;
+    height: auto;
+    background-color: wheat;
+}
+
+.check h5{
+    text-align: center;
+    margin: 1rem 0 .3rem 0;
+    font-size: x-large;
+}
+
+.check hr{
+    border: none;
+    height: .5vh;
+    background-color: tan;
+}
+
+.mail{
+    height: auto;
+    width: 60vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mail input{
+    background-color: cornsilk;
+    outline: none;
+    border: 2px solid tan;
+    border-radius: 5px;
+    text-align: center;
+    margin: 2vh 14%;
+    height: 3vh;
+}
+
+.order-check{
+    background-color: wheat;
+    height: auto;
+    width: 60vw;
+}
+
+
+.total-area{
+    font-family: 'Abel', sans-serif;
+    height: 10vh;
+    background-color: wheat;
+}
+
+.total-area hr{
+    border: none;
+    height: .5vh;
+    background-color: tan;
+}
+
+#total{
+    float: right;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 2vh 31vh 0vh 0;
+}
+
+#grand-total{
+    margin: 2vh -25.5vh 0 0;
+    float: right;
+}
+
+.purchase-btn{
+    font-family: 'Abel', sans-serif;
+    font-size: large;
+    text-transform: uppercase;
+    background-color: tan;
+    border-radius: 5px;
+    border: none;
+    width: 18vh;
+    height: 4.5vh;
+    float: left;
+    margin: 2vh 0 0 4vh;
+}
+.purchase-btn:hover{
+    background-color: rgb(172, 143, 105);
+}
+
+.checkout-items{
+    margin: 1rem 0;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.remove-item{
+    height: 4vh;
+    border: none;
+    width: 15vh;
+    border-radius: 5px;
+    background-color: tan;
+    margin: 0 3vh 0 5vh;
+}
+.remove-item:hover{
+    background-color: rgb(172, 143, 105);
+}
+
+.item-name{
+    width: 30vh;
+    margin-right: 5vh;
+}
+
+.item-price{
+    width: 15vh;
+    margin-right: 5vh;
+}
+
+.quantity{
+    width: 15vh;
+    margin-right: 5vh;
+}
+
+.quantity input{
+    border: none;
+    outline: none;
+    width: 4vh;
+    height: 4vh;
+    background-color: tan;
+}
+
+
+input[type="submit"]:hover{
+    background-color: rgb(172, 143, 105);
+}
+
+/* css for comments/suggestions of the website */
+.comments-suggestions{
+    opacity: 0;
+    transform: translateX(200vh);
+    position: absolute;
+    top: 35vh;
+    left: 20vw;
+    width: 60vw;
+    border-radius: 10px;
+    border: 2px solid black;
+    z-index: 3;
+}
+
+#comments-exit{
+    overflow-y: hidden;
+    border-radius: 50%;
+    border: none;
+    background-color: tan;
+    font-size: 25px;
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    right: 5vh;
+}
+#comments-exit:hover{
+    background-color: wheat;
+}
+
+.popup-comments{
+    width: 60vw;
+    height: auto;
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-comments input, textarea{
+    background-color: cornsilk;
+    outline: none;
+    border: 2px solid tan;
+    border-radius: 5px;
+    text-align: center;
+    margin: 2vh 5%;
+    height: 3vh;
+}
+
+textarea{
+    height: auto;
+}
+
+.popup-comments button{
+    font-family: 'Abel', sans-serif;
+    font-size: large;
+    text-transform: uppercase;
+    background-color: tan;
+    border-radius: 5px;
+    border: none;
+    width: 10vw;
+    height: 4.5vh;
+    margin: 2vh 6vh;
+}
+.popup-comments button:hover{
+    background-color: rgb(172, 143, 105);
+}
+
+.suggest-btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* css for bottom right accent */
+.bottom-right-nohover{
+    position: absolute;
+    bottom: -65vh;
+    right: -65vh;
+    transform: rotate(45deg);
+    background-color: tan;
+    width: 100vh;
+    height: 100vh;
+}
+
+/* css for the social page */
+.social-page{
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    overflow-y: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Abel', sans-serif;
+    background-image: linear-gradient(to bottom, #371b05, #4e2c12, #673f1c, #805225, #99672f); 
+}
+
+.collab h2{
+    text-align: center;
+    margin: 4.5rem 0 1rem 0;
+}
+
+.collab h4{
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
+
+.collab .para{
+    margin-top: 5rem;
+    font-size: x-large;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.social-media{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.social-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.social-item img{
+    z-index: 1;
+    width: 6rem;
+    margin: 6rem;
+    transition: all .8s ease-in-out;
+}
+.social-item img:hover{
+    transform: rotate(360deg);
+}
+
+.social-item p{
+    opacity: 0;
+    text-decoration: underline;
+    color: black;
+    font-family: 'Abel', sans-serif;
+    position: absolute;
+    font-size: x-large;
+    transition: .8s;
+}
+
+.social-item img:hover + p{
+    opacity: 1;
+    transform: translateY(4rem);
+}
